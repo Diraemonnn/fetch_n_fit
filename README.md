@@ -22,7 +22,7 @@ A powerful, general-purpose Python utility to batch download images from any URL
 2.  **Run the Script**:
 
     ```bash
-    python universal_downloader.py
+    python downloader.py
     ```
 
 3.  **Check Output**:
