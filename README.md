@@ -6,9 +6,10 @@ A powerful, general-purpose Python utility to batch download images from any URL
 
 ## Features
 
+- **🖥️ Modern GUI**: Includes a user-friendly Desktop App (`gui_app.py`) built with `customtkinter`.
 - **🎨 Smart Auto-Padding**: Automatically resizes images to fit within a specific bounding box while maintaining aspect ratio, then centers them on a unified canvas.
 - **🚀 Batch Processing**: Download hundreds of images in seconds.
-- **🔧 Universal Config**: capable of grabbing tech logos, game sprites, country flags, or any web asset with a predictable URL structure.
+- **🔧 Universal Config**: Capable of grabbing tech logos, game sprites, country flags, or any web asset with a predictable URL structure.
 - **🛡️ Error Handling**: Skips broken links gracefully without crashing.
 
 ## Quick Start
@@ -19,18 +20,33 @@ A powerful, general-purpose Python utility to batch download images from any URL
     pip install -r requirements.txt
     ```
 
-2.  **Run the Script**:
+    _Note: This now includes `customtkinter` for the GUI._
+
+2.  **Run the Application**:
+
+    **Option A: GUI App (Recommended)**
 
     ```bash
-    python universal_downloader.py
+    python gui_app.py
     ```
+
+    - Paste your list of items.
+    - Click "Start Download".
+
+    **Option B: CLI Script**
+
+    ```bash
+    python downloader.py
+    ```
+
+    - Edit `downloader.py` directly to configure URL patterns and items list.
 
 3.  **Check Output**:
     Images will appear in the `downloaded_assets` folder (or whatever you configured).
 
-## Configuration Guide
+## Configuration Guide (CLI)
 
-Open `universal_downloader.py` and edit the **USER CONFIGURATION SECTION** at the top.
+Open `downloader.py` and edit the **USER CONFIGURATION SECTION** at the top.
 
 ### Scenario A: Downloading Tech Logos
 
@@ -62,7 +78,7 @@ ITEMS_TO_DOWNLOAD = ["us", "gb", "fr", "jp", "de"]
 
 ## Customizing Dimensions
 
-You can control the output look by adjusting these variables:
+You can control the output look by adjusting these variables in `downloader.py` (or `gui_app.py` source):
 
 - `CANVAS_SIZE`: The total size of the final image (e.g., 350x350).
 - `IMAGE_MAX_SIZE`: The max size of the logo/sprite itself (e.g., 250x250).
